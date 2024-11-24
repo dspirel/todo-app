@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+<title>Register</title>
+{% endblock %}
+
+{% block content %}
+	<div class="content login-form">
+		<div class="row mx-auto">
+            <div class="row col-3"></div>
+			<div class="row col-6 text-center">
+				{{ form_start(form) }}
+                <h3 class="text-light">Registration</h3>
+				<div class="form-group col-3 mx-auto my-2 text-light">
+					{{ form_row(form.email) }}
+				</div>
+				<div class="form-group col-3 mx-auto my-2 text-light">
+					{{ form_row(form.plainPassword, { label: 'Password' }) }}
+				</div>
+				<div class="text-center form-group col-2 mx-auto my-2 pt-2">
+					<button type="submit" class="btn btn-primary btn-lg">Register</button>
+				</div>
+				{{ form_end(form) }}
+			</div>
+			<div class="row col-3">
+				{{ form_errors(form) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
